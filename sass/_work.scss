@@ -1,0 +1,107 @@
+@use "breakpoints";
+
+.work {
+  padding-top: 78px;
+  padding-bottom: 41px;
+  background: #f5fcf8;
+}
+
+.work__inner {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inner {
+}
+
+.work__title {
+  text-align: center;
+}
+
+.section__title {
+}
+
+.work__text {
+  margin-top: 69px;
+  text-align: center;
+}
+
+.work__cards {
+  margin-left: auto;
+  margin-inline-end: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 33px;
+  align-items: center;
+
+  @include breakpoints.mq(xl) {
+    flex-direction: row;
+  }
+}
+
+.work__card {
+  padding: 20px 17px 0 17px;
+  border-radius: 10px;
+  border: 2px solid #c9c9c9;
+  background: #fff;
+  width: calc(375px - 20px * 2);
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+
+  @include breakpoints.mq(sm) {
+    width: 70%;
+    height: 400px;
+  }
+
+  @include breakpoints.mq(lg) {
+    padding: calc(35px - 2px) calc(35px - 2px) 0 calc(35px - 2px);
+  }
+
+  @include breakpoints.mq(xl) {
+    padding: calc(40px - 2px) calc(37px - 2px) 0 calc(37px - 2px);
+    width: 380px;
+    height: 591px;
+  }
+}
+
+.work__card-title {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+
+  @include breakpoints.mq(lg) {
+    font-size: 24px;
+  }
+}
+
+.work__card-text {
+  margin-top: 28px;
+  font-weight: 700;
+  line-height: 1.8;
+  margin-top: 30px;
+
+  @include breakpoints.mq(xl) {
+    margin-top: 46px;
+    font-weight: 700;
+    line-height: 2.38;
+  }
+}
+
+.work__card-img {
+  position: absolute;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+
+  @include breakpoints.mq(lg) {
+    width: 187px;
+  }
+}

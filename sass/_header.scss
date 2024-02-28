@@ -1,0 +1,78 @@
+@use "breakpoints";
+
+.header {
+  // height: 90px;
+
+  @include breakpoints.mq(sm) {
+    height: 100px;
+  }
+  @include breakpoints.mq(md) {
+    height: 130px;
+  }
+}
+
+.header__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @include breakpoints.mq(sm) {
+    gap: 0;
+    max-width: calc(1180px + 20px * 2);
+    height: inherit;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.header__logo {
+  width: 150px;
+  @include breakpoints.mq(sm) {
+  }
+  @include breakpoints.mq(md) {
+    width: 200px;
+  }
+  @include breakpoints.mq(lg) {
+    width: 263px;
+  }
+}
+
+.header__right {
+  margin-top: 10px;
+  text-align: center;
+  align-items: center;
+  @include breakpoints.mq(sm) {
+    text-align: right;
+    margin-top: 33px;
+    margin-bottom: 35px;
+  }
+}
+
+.headet__text {
+  font-size: 14px;
+}
+
+.header__tel {
+  color: #21a937;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 7px;
+
+  @include breakpoints.mq(md) {
+    a {
+      display: flex;
+      justify-content: end;
+
+      img {
+        margin-right: 5px;
+        margin-top: 2px;
+      }
+    }
+  }
+}

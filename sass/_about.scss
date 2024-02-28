@@ -1,0 +1,85 @@
+@use "breakpoints";
+@use "setting";
+
+.about {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include breakpoints.mq(xl) {
+    padding-top: 162px;
+    padding-bottom: 82px;
+  }
+}
+
+.about__inner {
+  @include breakpoints.mq(sm) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.inner {
+}
+
+.about__contents {
+  @include breakpoints.mq(xl) {
+    display: flex;
+    margin-left: 33px;
+    gap: 42px;
+  }
+}
+
+.about__title {
+  text-align: center;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoints.mq(xl) {
+    margin-top: 31px;
+    text-align: left;
+    gap: 32px;
+  }
+}
+
+.about__title-bottom {
+  margin-top: 32px;
+}
+
+.about__heading {
+  text-align: center;
+}
+
+.section__title {
+}
+
+.about__text {
+  text-align: left;
+  margin-top: 37px;
+  line-height: 2;
+
+  @include breakpoints.mq(sm) {
+    // max-width: 550px;
+    text-align: center;
+  }
+
+  @include breakpoints.mq(xl) {
+    text-align: left;
+    line-height: 2.4;
+  }
+}
+
+.about__img {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoints.mq(md) {
+    max-width: 550px;
+  }
+
+  @include breakpoints.mq(xl) {
+    margin-top: 0;
+    max-width: 690px;
+  }
+}

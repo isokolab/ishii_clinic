@@ -1,0 +1,139 @@
+@use "setting";
+@use "breakpoints";
+
+.news {
+  padding-top: 41px;
+  padding-bottom: 113px;
+  background: #f5fcf8;
+}
+
+.news__inner {
+}
+
+.inner {
+}
+
+.news__title {
+  text-align: center;
+}
+
+.section__title {
+}
+
+.news__box {
+  padding: 50px 40px 50px 40px;
+  border-radius: 30px;
+  background: #fff;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoints.mq(lg) {
+    margin-top: 70px;
+    padding-top: 30px;
+    padding-bottom: 47px;
+    padding-left: 5.5%;
+    padding-right: 5.5%;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    max-width: 950px;
+  }
+
+  @include breakpoints.mq(xl) {
+    max-width: 1180px;
+  }
+}
+
+.news__lists {
+  max-width: 1048px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @include breakpoints.mq(md) {
+    gap: 0;
+  }
+}
+
+.news__list {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #e7e7e7;
+  padding-bottom: calc(20px - 2px);
+
+  @include breakpoints.mq(md) {
+    padding-top: 18px;
+    // align-items: center;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  @include breakpoints.mq(lg) {
+    display: flex;
+    gap: 30px;
+    padding-top: 18px;
+    padding-bottom: calc(18px - 2px);
+
+    // align-items: center;
+  }
+}
+
+.news__list-meta {
+  display: flex;
+  gap: 20px;
+
+  @include breakpoints.mq(lg) {
+  }
+  @include breakpoints.mq(xl) {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+.news__link-date {
+  color: setting.$main-color;
+  font-weight: 700;
+}
+
+.news__link-label {
+  min-width: 80px;
+  height: 25px;
+  padding: 4px 16px;
+  background: #444;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.news__link-title {
+  font-weight: 700;
+
+  @include breakpoints.mq(sm) {
+  }
+}
+
+.news__link-more {
+  text-align: right;
+  font-weight: 700;
+  // margin-right: 20px;
+  margin-top: 30px;
+  position: relative;
+
+  a {
+  }
+
+  img {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 9px;
+  }
+
+  @include breakpoints.mq(lg) {
+    margin-top: 47px;
+    margin-right: 0;
+  }
+}

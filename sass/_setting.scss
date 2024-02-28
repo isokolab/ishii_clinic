@@ -1,0 +1,101 @@
+@use "breakpoints";
+
+$main-color: #21a937;
+$line-color: #99e5a5;
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  color: #444;
+  font-weight: 400;
+  line-height: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+// 共通
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include breakpoints.mq(xl) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include breakpoints.mq(xl) {
+    max-width: calc(1180px + 40px * 2);
+  }
+}
+
+.section__title {
+  font-size: 20px;
+  font-weight: 700;
+  // text-decoration-line: underline;
+  // text-decoration-color: $line-color;
+  // text-decoration-thickness: 10px;
+  // text-underline-offset: -3px;
+  // text-decoration-skip-ink: none;
+  // text-align: center;
+
+  @include breakpoints.mq(lg) {
+    font-size: 24px;
+  }
+}
+
+.under-line {
+  text-decoration-line: underline;
+  text-decoration-color: $line-color;
+  text-decoration-thickness: 10px;
+  text-underline-offset: -3px;
+  text-decoration-skip-ink: none;
+}
+
+.text-color-01 {
+  color: $main-color;
+}
+
+.hidden-sp {
+  display: none;
+  @include breakpoints.mq(lg) {
+    display: block;
+  }
+}
+
+@include breakpoints.mq(sm) {
+  .hidden-sm {
+    display: none;
+  }
+}
+
+@include breakpoints.mq(md) {
+  .hidden-md {
+    display: none;
+  }
+}
+
+@include breakpoints.mq(lg) {
+  .hidden-lg {
+    display: none;
+  }
+}
+
+@include breakpoints.mq(xl) {
+  .hidden-xl {
+    display: none;
+  }
+}

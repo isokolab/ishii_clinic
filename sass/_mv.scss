@@ -1,0 +1,58 @@
+@use "breakpoints";
+
+.mv {
+  background: url(../img/mv_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-position: 70%;
+  height: 600px;
+
+  @include breakpoints.mq(md) {
+    height: 947px;
+  }
+}
+
+.mv__boxes {
+  position: absolute;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  margin-left: 8%;
+
+  @include breakpoints.mq(md) {
+    gap: 80px;
+    margin-top: 133px;
+  }
+
+  @include breakpoints.mq(xl) {
+    margin-left: 211px;
+  }
+}
+
+.mv__boxes-item {
+  background-color: #fff;
+  padding: 0px 15px;
+  width: 50px;
+  height: auto;
+  text-align: center;
+
+  @include breakpoints.mq(md) {
+    width: 102px;
+    height: 565px;
+  }
+}
+
+.mv__boxes-item-text {
+  writing-mode: vertical-rl;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  margin: 0 auto;
+
+  @include breakpoints.mq(md) {
+    font-size: 28px;
+  }
+}
